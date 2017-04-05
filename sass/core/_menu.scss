@@ -1,0 +1,308 @@
+
+header{
+	@include clearfix;
+	background:#fff;
+	margin:0 auto 24px;
+	padding:25px 0;
+	.part-1{
+		float:left;
+	}
+	.part-2{
+		float:right;
+	}
+	.part-3{
+		display: none;
+	}
+}
+
+#global-links{
+	width:$page-left;
+	float:left;
+	padding-top:25px;
+	a{
+		@include font-sizes(14px);
+		font-weight:bold;
+		color:$site-grey-4;
+		text-decoration:none;
+		text-align:center;
+		border-bottom:1px solid #fff;
+		padding:20px 0;
+		display:block;
+		span{
+			display: block;
+		}
+	}
+}
+
+#page{
+	@include clearfix;
+	width:$page-right;
+	float:right;
+	padding-left:100%-($page-left)-($page-right);
+	background:#fff;
+	#page-body{
+		@include clearfix;
+		margin:0 0 20px 0;
+	
+		.page-body-left{
+			width:68.7%;
+			float:left;
+			@include bp-large{
+				width: auto;
+				float:none;
+			}
+		}
+
+		.page-body-right{
+			width:28.4%;
+			float:right;
+			@include bp-large{
+				width: auto;
+				float:none;
+			}
+		}
+	}
+	#global-msg{
+		padding:0;
+		margin:0;
+	}
+	#page-bottom{
+		margin:0 0 50px 0;
+		padding:10px 0;
+		@include clearfix;
+		color:#999999;
+		@include font-sizes(16px);
+		border-top:1px solid $site-color-1;
+		text-align:center;
+
+		#footer-nav{
+			float: left;
+			>ul{
+				@include layoutlist;
+				>li{
+					padding:0 10px;
+					display:inline-block;
+					&:last-child{
+						background:none;
+					}
+				}
+			}
+			
+		}
+
+		#cr{
+			float: right;
+		}
+	}
+
+}
+
+
+#primary-nav{
+	padding:30px 0;
+	>ul{
+		@include font-sizes(14px);
+		@include layoutlist();
+		
+		display:table;
+		width:100%;
+		&>li{
+			&.mobile-only{
+				display: none;
+			}
+			>a{
+				color:$site-grey-3;
+				text-decoration:none;
+				display:block;
+				font-weight:bold;
+				text-transform:uppercase;
+				font-size:14px;
+				text-align:center;
+				height:50px;
+				line-height:50px;
+				span{
+				}
+				&.has-submenu{
+
+				}
+			}
+			&:first-child{
+				border:none;
+			}
+			&.active{
+				>a{
+					background:$site-color-1;
+					color:#fff;
+				}				
+				.has-submenu-sign{
+					border-top:10px solid #fff ;
+				}
+			}
+			border-left:1px solid #d1d3d4;
+			display:table-cell;			
+			vertical-align:middle;
+			position:relative;
+			padding:0;
+			&>ul{
+				display:none;
+				position:absolute;
+				width:100%;
+				top:50px;
+				left:0;
+				background:#f2f2f3;
+				li{
+					display:block;
+					a{
+						display:block;
+						color:$site-color-1;
+						@include font-sizes(9px);
+						padding:5px;
+						text-decoration:none;
+					}
+				}
+			}
+			&:hover{
+				ul{
+					display:block;
+				}
+				.has-submenu-sign{
+					//border-top:10px solid #fff ;
+				}
+			}
+		}
+		.has-submenu-sign{
+			display:inline-block;
+			border-top:10px solid $site-color-1;
+			border-left:6px solid transparent;
+			border-right:6px solid transparent;
+		}
+	}
+}
+
+.menu-button{
+	@include hamburger;
+	position: absolute;
+	top: 1em;
+	right:2em;
+	z-index: 1001;
+}
+
+@include bp-customize($menu-breakpoint){
+	#wrapper{
+		padding:0 1em;
+		width: auto;
+		background:none;
+	}
+	header{
+		display: table;
+		width: 100%;
+		.part-1{
+			float:left;
+			width: 30%;
+		}
+		.part-2{
+			float:left;
+			text-align: center;
+			width: 40%;
+		}
+		.part-3{
+			float:left;
+			display:block;
+			text-align: right;
+			width: 30%;
+		}
+
+	}
+	#global-links{
+		display: none;
+	}
+
+	#page{
+		@include clearfix;
+		width:auto;
+		float:none;
+		padding-left:0;
+	}
+	#primary-nav{
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom:0;
+		background: rgba(0,0,0,.5);
+		padding: 1em 2em;
+		z-index: 1000;
+		overflow: auto;
+
+		.show-menu &{
+			display: block;
+		}
+		>ul{
+			@include layoutlist;			
+			background:#fff;
+			display: block;
+			margin-top: 100px;
+			>li{
+				&.mobile-only{
+					display: block;
+				}
+				display:block;
+				text-align:left;
+				height:auto;
+				border-right:none;
+				border-left: none;
+				border-bottom:1px solid #bcbdc0;
+				background: #58585a;
+				&:last-child{
+					border-bottom:none;
+				}
+				a{
+					font-weight:normal;
+					padding:.8em 10px;
+					color:#ffffff;
+				}
+				&.active{
+					background: #000;
+				}
+				&:hover{
+					>ul{
+						display:none;
+					}
+				}
+				&.show-submenu{
+					
+					.mobile-sign{
+						.fa-minus{
+							display: inline-block;
+						}
+						.fa-plus{
+							display: none;
+						}
+					}
+					ul{
+						display: block;
+					}
+				}
+				&.mobile-menu-only{
+					display: block;
+				}
+				>ul{
+				    position:static;
+				    display: none;
+				    background:#999;
+
+				    padding-left: 1em;
+				    >li{
+						background:none;
+				    }
+				    a{
+						@include font-size(18px);
+						background:none;
+						border-bottom: 1px solid #bcbdc0;
+				    }
+				}
+			}
+		}
+	}
+}

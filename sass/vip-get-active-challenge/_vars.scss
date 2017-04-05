@@ -1,0 +1,48 @@
+@font-face {
+  font-family: HelveticaNeue;
+  src: url(../fonts/HelveticaNeueLTStd-Roman.otf) format("opentype");
+  font-weight: 400; 
+}
+
+$fonts-stack-1:Arial, sans-serif; 
+$fonts-stack-2:leagueGothic, arial, helvetica;
+$fonts-stack-3:Arial, sans-serif;
+
+$device-width:100%;
+$device-height:100%;
+
+$site-color-1:#8dc63f;
+
+	$site-grey-1:#e6e7e8;
+$key-color-1:#8dc63f;
+$key-color-2:#333;
+
+$content-width: 950px;
+$content-height:800px;
+
+$gerneral-size:16px;
+$gerneral-font-color:#231f20;
+$gerneral-font-stack:$fonts-stack-1;
+$gerneral-background:#fff;
+
+$link-color:$gerneral-font-color;
+
+$menu-item-normal-color:#ffd459;
+$menu-item-hover-color:#ffd459;
+
+$white: #fff;//white
+$black: #000;// dark
+
+$place-holder-color:.6;
+
+$animate-duration : 1s;
+
+$inner-padding:0;
+
+/* BREAK POINT */
+$break-point-w:1200px;	/* Large Devices, Wide Screens */
+$break-point-l:1024px;	/* landscape */
+$break-point-md:992px;	/* Medium Devices, Desktops */
+$break-point-sd:768px;	/* Small Devices, Tablets */
+$break-point-xs:480px;	/* Extra Small Devices, Phones */ 
+$break-point-xxs:320px;	/* Custom, iPhone Retina */

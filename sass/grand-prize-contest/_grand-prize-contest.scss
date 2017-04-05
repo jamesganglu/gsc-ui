@@ -1,0 +1,135 @@
+#c4l-grand-prize-contest-popup{
+	width:960px;
+	.line-1{
+		font-size: 48px;
+		color: $site-color-1;
+		text-align: center;
+		font-family: $font-stack-2;
+		background:url(../images/c4l-grand-prize-contest/img1.png) left center no-repeat;
+		padding-left: 200px;
+		min-height: 100px;
+		.alt{
+			color: #dd3348;
+		}
+		margin-bottom: 30px;
+	}
+	.line-2{
+		font-size:22px;
+		text-align: center;
+		.alt{
+			color: #dd3348;
+		}
+		margin-bottom: 50px;
+	}	
+	.line-3{
+		text-align: center;
+		.btn{
+			margin:0 20px;
+		}
+	}
+}
+
+.grand-prize-contest{
+	@include shadow(0 0 10px 10px rgba(218,218,218,.5));
+	&.in-popup{
+		@include shadow(none);
+	}
+	border:1px solid #dadada;
+	padding:0 30px 30px 30px;
+	font-size:16px;
+	h1{
+		color: #fff;
+		font-family: $font-stack-2;
+		background:$site-color-1;
+		padding:15px 30px;
+		margin: 0 -30px 30px -30px;
+	}
+	h2{
+		font-size: 18px;
+		color: $site-color-1;
+		margin-bottom: 10px;
+	}
+	.mark{
+		color: #dd3348;		
+	}
+	.line-1{
+		font-size: 20px;
+		text-align: center;
+	}
+	.line-2{
+		font-size: 22px;
+		text-align: center;
+		color: #dd3348;
+	}
+	.line-3{
+		font-size: 14px;
+		margin-bottom: 2em;
+		a{
+			color: #000;
+		}
+	}
+	.line-4{
+		margin-bottom: 2em;
+		a{
+			color: #000;
+		}
+	}
+	.line-5{
+		font-size: 20px;
+		color: $site-color-1;
+		text-align: center;
+	}
+	.cr-field{
+		a{
+			color: #000;
+		}		
+	}
+
+	.grand-prize-status{
+		width: 45%;
+		margin-bottom: 20px;
+		h3{
+			color: $site-color-1;
+			font-family: $font-stack-2;
+			font-size: 20px;
+		}
+		.side{
+			float: right;
+			font-size: 12px;
+			color: $site-color-1;
+		}
+	}
+}
+
+.grand-prize-list{
+	@include layoutlist();
+	margin-bottom: 1em;
+	li{
+		@include box-model(border-box);
+		display: block;
+		float: left;
+		width: 25%;
+	}
+	.image{
+		padding-bottom: 20px;
+		padding:10px;
+	}
+	.name{
+		text-align: center;
+		font-size: 16px;
+		min-height: 50px;
+		padding-bottom: 5px;
+			border: 1px solid #d1d3d4;
+		padding:10px;
+		a{
+			color: #000;
+		}
+	}
+	.detail{
+		font-size: 12px;
+		padding:0 10px;
+			border: 1px solid #d1d3d4;
+		padding:10px;
+	}
+}
+

@@ -1,0 +1,197 @@
+.iframe-popup{	
+	@include clearfix();
+	position:relative;
+	margin:20px auto;
+}
+
+// used in hra history popup etc.
+.plain-popup-wrapper{
+	padding: 20px;
+	position: relative;
+	>.inner{
+		position: relative;
+		@include clearfix;
+		background:#fff;
+		padding: 20px;
+	}
+}
+//used in message popup message-popup.aspx
+//no background, size, border apply in it.
+.popup-wrapper{
+	padding:20px;
+	>.inner{
+		position: relative;
+	}
+}
+
+
+.message-popup{
+	position:relative;
+	font-family:$font-stack-1; 
+	@include font-size(16px); 
+	padding:10px; 
+	background:#fff;
+	margin: 0 auto;
+	max-width:300px;
+	.btn{		
+		@include build-btn(#fff, #57b760, 16px, none, 3px 10px, 5px);
+	}
+}
+
+.video-popup-page{
+	padding:20px;
+	width:100%;
+	max-width:430px;
+}
+
+.popup-wrapper{
+	@include clearfix;
+	.close-popup{
+		 background:url(../images/plugins/close-popup.png) no-repeat;
+		width:32px;
+		height:32px;
+		display:block;
+		position:absolute;
+		top:-16px;
+		right:-16px;/* */
+		text-decoration:none;
+	}
+	h1{
+		background:$site-color-1;
+		color:#fff;
+		//padding:5px 10px;
+	}
+	h2{
+		color:$site-color-1;
+		font-weight:bold;
+	}
+	h3{
+		font-weight:bold;
+	}
+	ol{
+		list-style:decimal;
+		margin:0 0 1em 0;
+		padding:0 0 0 2em;
+		li{
+			margin:0 0 1em 0;
+		}
+	}
+}
+
+.site-annouce-page{
+	width:100%;
+	max-width:680px;
+}
+
+
+#din-popup{
+	padding:20px;
+	background:#fff;
+	font-size:16px;
+	max-width:740px;
+	h1{
+		font-size:18px;
+		background:$site-color-1;
+		color:#fff;
+		margin:0 0 17px 0;
+	}
+	h2{
+		font-size:16px;
+		font-weight:bold;
+		color:#0094d7;
+		margin:0;
+	}
+	.part-1{
+		width:63.8%;
+		float:left;
+	}
+	.part-2{
+		width:34.3%;
+		float:right;
+		text-align:right;
+	}
+}
+
+.help-popup{
+	max-width:300px;
+	padding:10px;
+	font-family:Arial, 'Helvetica Neue'; 
+	font-size:16px; 
+	background-color:#fff;
+	position:relative;
+	margin:20px auto;
+	@include clearfix();
+}
+
+.inline-diag-popup{
+	padding:15px;
+	background:#fff;
+	text-align:left;
+	max-width:290px;
+	position:relative;
+	margin:0 auto;
+	.btn{
+		background:#f5922e;
+	}
+}
+
+.notify-popup{
+	@include build-popup(530px,42px);
+	width: 530px;
+	.head-bar{
+		text-align:center;
+	}
+	margin:0 auto;
+	.btns{
+		text-align:center;
+		.btn{
+			@include build-btn(#fff, $site-grey-3, 22px, none, 10px, 0);
+			font-family:$font-stack-2;
+		}
+	}
+	.mfp-close{
+		display: none;
+	}
+}
+
+
+
+.message-box{
+    width:600px;
+    background:#fff;
+    padding:20px;
+}
+
+	#reward-bid-popup{
+		p{
+			margin-bottom:5px;
+		}
+	}
+
+#vip-challenge-notify{
+	width:900px;
+	.popup-body{
+		text-align: center;
+		background: url(/vip-get-active-challenge/images/logo1.png) 20px 20px no-repeat;
+	}
+	.logo{
+		float: left;
+	}
+	.line-1{
+		@include font-size(26px);
+		color: $site-color-1;
+	}
+	.line-2{
+		@include font-size(24px);
+	}
+	.line-3{
+		@include font-size(20px);
+	}
+	.line-4{
+		@include font-size(24px);
+	}
+	.alt{
+		color: $site-color-1;
+	}
+}
+

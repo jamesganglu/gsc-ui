@@ -1,0 +1,67 @@
+/* key features */
+	$isResponsive:true;
+
+/** FONTS **/
+	@include fontface(leagueGothic, League Gothic);
+	
+	$font-stack-1:arial, helvetica;
+	$font-stack-1-regular:avenirLTStdRegular, avenirLTStdMedium, arial, helvetica;
+	$font-stack-1-medium:avenirLTStdMedium, arial, helvetica;
+	$font-stack-1-roman:avenirLTStdRoman, arial, helvetica;
+	$font-stack-1-heavy:avenirLTStdHeavy, avenirLTStdMedium, arial, helvetica;
+	$font-stack-1-black:avenirLTStdBlack, avenirLTStdMedium, arial, helvetica;
+
+	$font-stack-2:leagueGothic, arial, helvetica;
+
+
+	$general-font-color:#231f20;
+	$general-font-size:16px;
+
+	$link-color:#00aeef;
+	$place-holder-color:#999;
+
+/** VARS **/
+	$page-width:1180px;
+	$page-background:#d1d3d4;
+
+	$page-left:16%;
+	$page-right:80%;
+
+	//main
+	$page-main-top-content:100%;
+	$page-main-bottom-content:100%;
+
+/* pallete */
+	$site-color-1:#8dc63f;
+	$site-green-2:#ddeec5;
+
+	//GREY
+	$site-grey-1:#e6e7e8;
+	$site-grey-2:#a7a9ac;
+	$site-grey-3:#6d6e71;
+	$site-grey-4:#231f20;
+	$site-grey-5:#d1d3d4;
+	$site-grey-6:#808080;
+
+	//level color
+	$color-high:#dd3348;
+	$color-mid:#ffc64b;
+	$color-low:$site-color-1;
+
+
+
+
+
+
+$general-round-corner:8px;
+	
+
+/** NAVIGATION **/
+
+$container-lg:1140px;
+$container-desktop:1024px;
+$container-tablet:768px;
+$screen-phone:480px;
+$break-point-xxs:320px;
+
+$menu-breakpoint:1100px;

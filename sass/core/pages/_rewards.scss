@@ -1,0 +1,199 @@
+
+#rewards-store-page{
+	h1{
+		@include  build-section-title;
+	}
+
+	h2{
+		font-family:$font-stack-2;
+		color:$site-color-1;
+		@include font-sizes(36px);
+		text-transform:uppercase;
+		margin:0 0 18px 0;
+	}
+
+	h3{
+		font-family:$font-stack-2;
+		@include font-sizes(24px);
+		text-align:center;
+		background:#a7a9ac;
+		color:#fff;
+		padding:5px;
+		margin:0 0 10px 0;
+		&.type-1{
+		}
+		&.type-2{
+			background:$site-color-1;
+		}
+		&.type-3{
+			background:#006227;
+		}
+		&.type-4{
+			background:#6d6e71;
+		}
+		&.type-5{
+			background:#414042;
+		}
+	}
+}
+
+.rewards-list{
+	@include teaser-list;
+	margin:0 0 20px 0;
+	.item{
+		position: relative;
+		border:1px solid #dcddde;
+		position:relative;
+	}
+	.badge{
+		position:absolute;
+		top:10px;
+		right:10px;
+		@include border-radius(50%);
+		width:70px;
+		height:70px;
+		line-height:70px;
+		background:$site-color-1;
+		color:#fff;
+		font-family:$font-stack-2;
+		@include font-sizes(19px);
+		text-align:center;
+		span{
+			padding:10px;
+			display:inline-block;
+			line-height:1.2;
+			vertical-align:middle;
+		}
+	}
+	.thumbnail{
+		text-align:center;
+		padding:10px;
+		height:85px;
+	}
+	.description{
+		@include clearfix;
+		padding:0 10px;
+		//min-height:220px;
+		@include font-sizes(13px);
+		color:#231f20;
+		margin-bottom: 1.5em;
+	}
+	.info{
+		padding:6px;
+		@include font-sizes(13px);
+		p{
+			margin:0 0 8px 0;
+		}
+		.line-1{
+			color:#006227;
+		}
+		.line-2{
+			color:$site-color-1;
+		}
+		.line-3{
+			color:$site-color-1;
+		}
+	}
+	h4{
+		@include font-sizes(20px);
+		margin:0 0 5px 0;
+		font-family:$font-stack-2;
+		color:$site-color-1;
+		text-align:center;
+	}
+}
+
+.history-bar{
+	background:#fff;
+	@include clearfix;
+	.cell{
+		padding:1em 10px;
+		@include box-model(border-box);
+		float: left;
+		.label{
+			display: none;
+		}
+	}
+	.date{
+		width:13%;
+	}
+	.type{
+		width:23%;
+	}
+
+	.description{
+		width:38%;
+	}
+	.points{
+		width:16%;
+	}
+	.drawdate{
+		width:30%;
+	}
+	.history-date{
+		width:23%;
+		white-space: nowrap;
+	}
+
+	&.head{
+		.cell{
+		}
+		background:$site-color-1;
+		color:#ffffff;
+		margin:0 0 20px 0;
+		font-weight:bold;
+	}
+
+	@include bp-medium{
+		&.head{
+			display: none;
+		}
+		margin-bottom: 1em;
+
+		.cell{
+			float: none;
+			padding: 8px 10px;
+			.label{
+				display: inline-block;
+			}
+		}
+		.date{
+			width:auto;
+		}
+		.type{
+			width:auto;
+		}
+
+		.description{
+			width:auto;
+		}
+		.points{
+			width:auto;
+		}
+		.drawdate{
+			width:auto;
+		}
+
+	}
+
+}
+
+.history-list{
+	@include layoutlist;
+	li{
+		margin-bottom: 10px;
+		.cell{
+			padding:10px;
+		}
+	}
+}
+
+.side-badge{
+	float: right;
+	margin: 0 0 1em 1em;
+	@include bp-small{
+		float: none;
+		margin:0 0 1em 0;
+		text-align: center;
+	}
+}

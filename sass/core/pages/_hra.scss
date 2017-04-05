@@ -1,0 +1,375 @@
+.hra-popup{
+	@include build-popup(none,42px);
+	h1{
+		text-transform: uppercase;
+	}
+	.btns{
+		text-align:right;
+		.btn{
+			@include btn-type-1(22px);
+		}
+	}
+}
+
+.pre-hra{
+	h1{
+		padding:10px 15px;
+	}
+	@include font-sizes(17px);
+	.welcome{
+		@include font-sizes(54px);
+		font-family:$font-stack-2;
+		color: $site-color-1;
+		text-align:center;
+		margin:0 0 15px 0;
+	}
+
+	.welcome-boxes{
+		text-align:center;
+		margin:0 0 65px 0;
+		.box-1{
+			position:relative;
+			background:$site-color-1;
+			color:#fff;
+			font-family:$font-stack-2;
+			padding:10px;
+			@include font-sizes(28px);
+			line-height:1.1;
+			.standout{
+				color:#231f20;
+			}
+			&:after{
+				content:"";
+				@include arrowDown(17px, 14px, $site-color-1);
+				position:absolute;
+				bottom:-14px;
+				left:50%;
+				margin-left:-32px;
+			}
+		}
+		.box-2{
+			background:$site-grey-2;
+			color:$site-grey-3;
+			font-family:$font-stack-1-medium;
+			padding:30px 20px 10px 20px;
+			color:#231f20;
+		}
+		.box-3{
+			background:$site-grey-3;
+			color:#fff;
+			font-family:$font-stack-2;
+			padding:25px;
+			.btn{
+				@include btn-type-1(22px);
+			}
+		}
+	}
+
+	.btn-bar{
+		text-align:right;
+		margin:0 0 35px 0;
+	}
+
+	.btn{
+		@include btn-type-1(22px);
+	}
+}
+
+.half-completed{
+	.intro{
+		@include font-sizes(17px);
+	}
+	.progress-holder-2{
+		margin:0 0 20px 0;
+	}
+	.btn{
+		@include btn-type-1(22px);
+	}
+	.box-style-1{
+		margin:0 0 60px 0;
+	}
+}
+
+#pre-questionaire-tabs{
+	@include clearfix();
+	color:#666666;
+	position:relative;
+	.tabs-side-nav{
+		ul{
+			@include layoutlist();
+			li{
+				margin:0;
+			}
+		}
+		width:35%;
+		float:left;
+		a{
+			color:#fff;
+			background:#6d6e71;
+			text-decoration:none;
+			@include font-sizes(19px);
+			line-height:1;
+			font-weight:bold;
+			padding:10px 15px;
+			height:20px;
+			display:block;
+			border-bottom:1px solid #fff;
+			position:relative;
+			&.on{
+				background:#bdbfc1;
+				&:after{
+					content:"";
+					display:block;
+					width: 0; 
+					height: 0;
+					border-top: 20px solid transparent;
+					border-bottom: 20px solid transparent;
+					border-left: 15px solid #bdbfc1;
+					position:absolute;
+					top:0;
+					right:-15px;
+				}
+			}
+			&.visited{
+				background:#bdbfc1;
+			}
+		}
+	}
+	.tab-contents{
+		width:65%;
+		float:right;
+	}
+	.scrollable-holder{
+		padding:20px 40px;
+		outline:none;
+		@include bp-small{
+			padding: 20px;
+		}
+	}
+	.scrollable{
+		width:100%;
+		outline:none;
+		@include bp-medium{
+			height:auto!important;
+			margin-bottom: 3em;
+		}
+	}
+	h2{
+		color:$site-color-1;
+		@include font-sizes(20px);
+		line-height:1;
+		font-weight:bold;
+		margin:0 0 10px 0;
+	}
+	.intro{
+		@include font-sizes(18px);
+	}
+	.form{
+		.field{
+			margin:0 0 20px 0;
+		}
+		label{
+			display:inline-block;
+			vertical-align:top;
+			@include font-sizes(15px);
+			font-weight:bold;
+			margin:0 25px 0 0;
+		}
+	}
+	.question{
+		@include font-sizes(20px);
+		font-weight:bold;
+		color:#6d6e71;
+		background:#f6d4d4;
+		padding:5px;
+	}
+	.action{
+		position:absolute;
+		bottom:20px;
+		right:40px;
+	}
+	.btn{
+		@include btn-type-1(22px);
+	}
+	.jspDrag{
+		background:url(../images/scroll-handler.png) no-repeat;
+		width:21px;
+		height:54px!important;
+	}
+}
+
+
+#getting-started-form{
+	h2{
+		@include font-sizes(20px);
+		color:$site-color-1;
+		margin:0 0 10px 0;
+	}
+	label{
+		display:inline-block;
+		vertical-align:top;
+		margin:0 20px 0 0;
+		color:#6d6e71;
+	}
+	.dropdownlist{
+		height:70px;
+		overflow-y:auto;
+		a{
+			padding:5px;
+			@include font-sizes(12px);
+		}
+	}
+}
+
+.survey-popup{
+	@include clearfix();
+	@include border-radius(5px);
+	border:6px solid #dbdbdb;
+	background:#fff;
+	padding:20px;
+	max-width:600px;
+	min-height: 200px;
+	margin:20px auto;
+
+	position:relative;
+	h1{
+		@include font-sizes(22px);
+		color:#6d6e71;
+		background:none;
+		margin:0 0 15px 0;
+		padding:0;
+		text-align:center;
+	}
+	.question{
+		@include font-sizes(17px);
+		color:#231f20;
+		margin:0 0 8px 0;
+	}
+
+	.range-bar{
+		background:$site-color-1;
+		color:#fff;
+		padding:7px;
+		margin:0 -20px 5px -20px;
+		text-align:center;
+		.range-item{
+			display:inline-block;
+			vertical-align:top;
+			text-align:center;
+			margin:0 10px;
+			label{
+				display:block;
+				@include font-sizes(17px);
+				font-weight:bold;
+				padding:5px;
+			}
+		}
+	}
+
+	.range-tags{
+		text-align:center;
+		margin:0 0 10px 0;
+		.range-tag{
+			display:inline-block;
+			font-weight:bold;
+			color:#6d6e71;
+			@include font-sizes(14px);
+			margin:0 11.66%;
+		}
+	}
+
+	.action{
+		text-align:center;
+		padding:10px 0;
+		.btn{
+			@include btn-type-5(22px);
+		}
+	}
+}
+
+.slider-value{
+	padding:13px 6px;
+	width:110px;
+	height:25px;
+	border:2px solid #a4cc43;
+	background:#75ad5a;
+	color:#fff;
+
+	@include font-sizes(15px);
+	font-weight:bold;
+
+	text-align:center;
+	margin:0 10px 1em 0;
+
+
+	display:inline-block;
+	vertical-align:middle;
+	@include border-radius(5px);
+	input[type="text"]{
+	    width: 5em;
+	}
+	select{
+		width: 7em;
+	}
+}
+
+.slider-value-unit{
+	&:hover{
+		text-decoration: none;
+	}
+	padding:13px 0;
+	width:90px;
+	height:25px;
+
+	border:2px solid #a4cc43;
+	background:#75ad5a url(../images/arrow-down.png) 75px center no-repeat;
+	color:#fff;
+	text-align:center;
+	@include font-sizes(15px);
+	font-weight:bold;
+	display:inline-block;
+	vertical-align:middle;
+	text-decoration:none;
+    @include border-radius(5px);
+	margin:0 0 1em 0;
+	&.no-change, &.volumn-unit{
+	    background-image:none;
+	}
+}
+
+.hra-quiz-list{
+	@include build-order-list(#75ad5a, #666);
+	>li{
+		&:before{
+			font-weight: bold;
+		}
+	}
+	@include font-sizes(15px);
+
+	.quiz-title{
+		font-weight:bold;
+	}
+}
+
+.help-links-block {
+	position:relative;
+	.help-content{
+		position:absolute;
+		bottom:60px;
+		right:0;
+		border:1px solid #666;
+		padding:10px;
+		background:#fff;
+		display:none;
+		width:400px;
+		z-index: 100;
+		@include bp-small{
+			width: auto;
+			left: 0;
+		}
+	}
+}
+
+.standout-3{
+	color:#75ad5a;
+}
