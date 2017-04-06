@@ -642,7 +642,8 @@
     background:#fff;
     margin: 0 auto;
     h1{
-      @include font-sizes($title-size);
+      @include font-sizes($title-size, $title-size/1.2, $title-size/1.5);
+
       font-family:$font-stack-2;
       color:#fff;
 
@@ -655,7 +656,7 @@
       background:$site-color-1;
       /* min-height:72px;
       padding:1em; */
-
+      padding-right: 40px;
       position:relative;
       .btns{
         //min-height:42px;
@@ -707,7 +708,11 @@
   background:$background;
   padding:$padding;
   max-width:$max-width;
-  margin:0 auto;
+  margin:10px auto;
+  position: relative;
+  .close-iframe-popup{
+    @include btn-close-popup-1();
+  }
 }
 
 @mixin btn(){
@@ -904,4 +909,17 @@
       padding: 20px;
     }
   }
+}
+
+@mixin btn-close-popup-1(){
+  background: url(../images/theme/close-popup.png) no-repeat;
+  background-size: cover;
+  width: 27px;
+  height: 27px;
+  position:absolute;
+  top:-13px;
+  right:-13px;
+  text-decoration: none;
+  overflow: hidden;
+  text-indent: -100em;
 }

@@ -42,8 +42,11 @@
 	}
 
 	.bar-1{
-		@include pipe-bar;
+		
+		display: table;
+		width: 100%;
 		>.cell{
+			display: table-cell;
 			vertical-align: top;
 			&:first-child{
 				width: 5em;

@@ -319,6 +319,11 @@
 	}
 
 	.box-ma{
+		.close-iframe-popup{
+			@include btn-close-popup-1();
+		}
+		
+		background:#fff;
 		@include border-radius(20px);
 		border:	25px solid $site-grey-1;
 		padding:10px;

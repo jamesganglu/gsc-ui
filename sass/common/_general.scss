@@ -576,7 +576,6 @@
 	}
 }
 
-
 .cancel-btn{
 	@include build-btn(#fff, #757779,32px, none, .5em 1em, 0)
 }
@@ -715,6 +714,15 @@
 .btn{
 	@include btn-type-1(22px);
 }
+
+.chev-btn{
+	&:after{
+		display: inline;
+		content: " \000BB";
+
+	}
+}
+
 .btn-type-1{
 	@include btn-type-1(22px);
 }
@@ -994,18 +1002,17 @@
 	}
 }
 
-/* .mfp-content,.popup-content{
-    button.mfp-close{
-        background:url(../images/close-popup.png) no-repeat;
-        width:30px;
-        height:30px;
-        text-indent:-1000px;
-        overflow:hidden;
-        top:-15px;
-        right:-15px;
-        text-align:left;
-    }
-} */
+.popup-content{
+	@include border-radius(10px);
+	@include clearfix();
+	border:2px solid #000;
+	position:relative;
+	background:#fff;
+	.content{
+		padding:40px 20px 20px 20px;
+	}
+}
+
 
 .submit-bar{
 	text-align: center;

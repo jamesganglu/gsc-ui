@@ -1,0 +1,585 @@
+.greeting-popup{
+	@include build-popup(970px, 30px);
+	.popup-body{
+		padding: 40px 100px;
+	}
+
+	h1{
+		font-family: $font-stack-1-regular;
+		text-transform: inherit;
+	}
+
+	.row-layout-input{
+		width: 100%;
+		text-align: center;
+		.cell{
+			padding:1em;
+		}
+	}
+}
+
+#steps-study-page{
+	background-image:url(../images/bg1.jpg);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	//background-size:contain;
+	background-color: #FFF;
+	padding:110px 0 0 40px;
+	position:relative;
+	&.size-2{
+		padding:110px 0 0 150px;
+	}
+	&.size-3{
+		padding:110px 0 0 100px;
+		.intro{
+			padding-left: 60px;
+
+		}
+	}
+
+	&.in-popup{
+		padding-top:120px;
+		max-width: 540px;
+		margin: 10px auto;
+		//position: static;
+
+        .close-iframe-popup{
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: block;
+			font-size:30px;
+			width: 40px;
+			height: 40px;
+			text-decoration: none;
+			text-align: center;
+			line-height: 40px;
+			background: none;
+			color: #fff;
+			background: #6d6e71;
+			text-indent: 0;
+        }
+		h1{
+			left: 200px;
+		}
+        .general-content{
+        	@include font-sizes(16px);
+        }
+	}
+
+	&.no-decor.in-popup{
+		background-image:url(../images/spacer.jpg);
+		padding:0;
+	}
+
+	h1{
+		@include font-size(24px);
+		position:absolute;
+		top:40px;
+		left: 160px;
+		background: none;
+		padding:0;
+		color: #000;
+		text-transform: inherit;
+		&.size-2{
+			@include font-size(36px);
+		}
+	}
+
+	.above{
+		position:absolute;
+		top:20px;
+		left: 160px;
+
+	}
+
+	.intro{
+		min-height: 80px;
+		padding-left: 120px;
+		@include font-size(18px);
+		line-height: 2;
+		@include clearfix;
+	}
+
+	.btn{
+		@include btn-type-1(22px);
+	}
+
+	.icon-btn-bar{
+		@include icon-text-bar;
+		width: 100%;
+	}
+
+	.how-much-time-list{
+		@include table-list;
+		width: 100%;
+		margin-bottom: 2em;
+		.cell{
+			vertical-align: top;
+			&.lead{
+				width: 60px;
+			}
+		}
+		.alph{
+			cursor: pointer;
+			width: 20px;
+			height: 20px;
+			padding:20px;
+			@include border-radius(50%);
+			border:3px solid $site-color-1;
+			color:$site-color-1;
+			font-size:20px;
+			line-height: 1;
+			text-align: center;
+		}
+		.line-1{
+			@include font-size(20px);
+			margin-bottom: .5em;
+		}
+		.line-2{
+			@include font-size(12px);
+			font-style: italic;
+			text-align: right;
+			margin-bottom: .5em;
+			color: #000;
+		}
+		.time-scale{
+			height: 20px;
+			@include border-radius(10px);
+			border:2px solid $site-color-1;
+			overflow: hidden;
+			.level{
+				//@include border-radius(10px 0 0 10px);
+				height: 20px;
+				background: #d9eabe;
+			}
+		}
+
+		.opt-1{
+			.level{
+				width: 20%;
+			}
+		}
+
+		.opt-2{
+			.level{
+				width: 50%;
+				background: #8eca69;
+			}
+		}
+
+		.opt-3{
+			.level{
+				width: 80%;
+				background: #0d9347;
+			}
+		}
+
+		.fade{
+			color: #cdcccc;
+			.alph{
+				color: #cdcccc;
+				border-color:#cdcccc;
+			}
+			.time-scale{
+				border:2px solid #cdcccc;
+				.level{
+					background: #cdcccc;
+				}
+			}
+		}
+
+		.active{
+			color: #8cc640;
+			.alph{
+				color: #fff;
+				background: #8cc640;
+			}
+			.time-scale{
+				border:2px solid #8cc640;
+				.level{
+				}
+			}
+
+		}
+	}
+
+	.opt-content{
+		display: none;
+		&.on{
+			display: block;
+		}
+	}
+
+	.yes-no-question-list{
+		@include layoutlist;
+		li{
+			border:2px solid $site-color-1;
+			@include border-radius(10px);
+			padding:1em;
+			margin-bottom: 1em;
+			@include clearfix;
+			.question{
+				@include box-model(border-box);
+				@include font-size(16px);
+				width: 74%;
+				float:left;
+				padding-left: 1.5em;
+				position: relative;
+				.num{
+					line-height: 1.3;
+					position: absolute;
+					top:0;
+					left: 0;
+				}
+			}
+			.options{
+				@include font-size(14px);
+				width: 25%;
+				float:right;
+				text-align: right;
+				>label{
+					margin-right: 1em;
+					&:last-child{
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+
+	#rejected{
+		@include font-size(23px);
+	}
+
+	.tabs{
+		border:1px solid #818285;
+		@include border-radius(5px);
+		overflow: hidden;
+		.tabs-nav{
+			display: table;
+			margin: 0 0 20px 0;
+			width: 100%;				
+			>li{
+				position: relative;
+				counter-increment: step;
+				&:before{
+					content: counter(step);
+					display: block;
+					position: absolute;
+					top: 1em;
+					left: 1em;
+					color: #bdbec0;
+				}
+				font-family: $font-stack-2;
+				@include font-size(20px);
+				display: table-cell;
+				padding:1em 2em;
+				background: #e7e7e8;
+				border-right: 2px solid #fff;
+				&:last-child{
+					border-right:none;
+				}
+				>span{
+					color: #bdbec0;
+					text-decoration: none;
+				}
+				&.on{
+					&:before{
+						color: $site-color-1;
+					}
+					background: #d1d2d4;
+					>span{
+						color: $site-color-1;
+					}
+
+				}
+			}
+			@include bp-small{
+				display: block;
+				>li{
+					display: block;
+				}
+			}
+		}
+
+		.tab-content{
+			padding:1em;
+		}
+	}
+
+	input[type="text"]{
+		border:1px solid #595758;
+		padding: .5em;
+		@include box-model(border-box);
+	}
+
+	select.original-style{
+		//@include build-input;
+		@include box-model(border-box);
+		//@include appearance(none);
+		background:url(../images/ddm-btn.png) center right no-repeat;
+		padding: .5em;
+		max-width: 100%;
+		border:1px solid #595758;
+		
+	}
+	.input-line{
+		margin-bottom: 1em;
+	}
+
+	.form-1{
+		.field{
+			display: table;
+			margin-bottom: 1em;
+			width: 100%;
+			label{
+				display: table-cell;
+				width: 100px;
+				padding-right: 1em;
+			}
+			.input{
+				display: table-cell;
+				input[type="text"]{
+					width:100%;
+				}
+			}
+		}
+	}
+	.form-2{
+		@include form-grid-layout;
+		label{
+			display: block;
+			margin-bottom: .5em;
+		}
+		.input-size-3{
+			width: 3em;
+		}
+	}
+	.form-3{
+		.field{
+			@include clearfix;
+			margin-bottom: 1em;
+			.field-name{
+
+			}
+			.input{
+				text-align: justify;
+				position: relative;
+				@include clearfix;
+				padding: 0 30px;
+				&:before{
+					display: block;
+					content: "";
+					height: 5px;
+					border:1px solid #c4c5c7;
+					position: absolute;
+					top:5px;
+					left: 1em;
+					right: 1em;
+					@include gradient-horizontal(#fff, #3bb54b);
+				}
+				&:after{
+					display: inline-block;
+					content: "";
+					width: 100%;
+				}
+				.item{
+					width: 20px;
+					display: inline-block;
+					position: relative;
+					z-index: 100;
+					text-align: center;
+					label{
+						position: absolute;
+						width: 100px;
+						left: -40px;
+						text-align: center;
+						font-size: .8em;
+						padding:.5em 0;
+						display: block;
+					}
+				}
+			}
+		}
+	}
+
+	.icon-text-bar{
+		.icon,.text{
+			padding:0 .5em 1em 0;
+		}
+	}
+
+	#eligibility-success-popup{
+
+	}
+
+	#steps-history{
+		@include font-size(20px);
+		margin-bottom: 2em;
+		background: url(../images/img4.jpg) bottom center no-repeat;
+		h2{
+			font-family: $font-stack-2;
+			@include font-size(36px);
+			background: url(../images/line-1.jpg) bottom left no-repeat;
+			padding-bottom:20px;
+			margin-bottom: 1em;
+		}
+	}
+
+	#steps-study-gift-card{
+		@include font-size(20px);
+		text-align: center;
+	}
+
+	.device-id-input{
+		@include input-bar();
+		margin-bottom: 5em;
+		.cell{
+			padding:0 1em;
+		}
+		font-family: $font-stack-2;
+		@include font-size(24px);
+		input[type="text"]{
+			border:none;
+		}
+	}
+
+	.icon-text-bar{
+		.icon{
+			vertical-align: top;
+		}
+	}
+
+	.border-text{
+		border:2px solid #116333;
+		padding:.5em 1em;
+		font-family:$font-stack-2;
+		color:#116333;
+		display:inline-block;
+	}
+
+	.calendar{
+	}
+
+	.gift-cards{
+		.gift-cards-list{
+			@include grid-list;
+			>li{
+				border:1px solid $site-color-1;
+				margin-bottom: 0;
+				.image{
+					padding:1em;
+				}
+			}
+		}
+	}
+}
+
+/**************** HHS Steps Study **************************/
+#steps-study-page .warmup-text {
+    font-size: 36px;
+    font-size: 2.25rem;
+    font-family: leagueGothic, arial, helvetica;
+    position: absolute;
+    top: 90px;
+    left: 160px;
+    background: none;
+    padding: 0;
+    margin-bottom:30px;
+    color: #000; }
+.blank-area1 {
+    min-height:40px;
+ }
+.change-month {
+    color: #000;
+    text-decoration: none;
+ }
+.btn-enter {
+    color: #fff;
+    border: 2px solid #fff;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 10px;
+    padding: 0px 5px 0px 5px;
+    cursor: pointer; 
+ }
+.warmup-steps {
+    margin-top: 13px;
+    color: #8dc63f;
+ }
+.calendar-steps {
+    margin-top: 13px;
+    color: #8dc63f;
+ }
+.calendar-steps span {
+    vertical-align: -5px;
+}
+.checked-mark {
+    margin-left:2px;
+}
+
+/******* eligibility success pages *******/
+#steps-study-page h1.h1-es {
+    text-transform: none !important;
+}
+
+/* #steps-study-page .tabs .tabs-nav-es {
+    display: table;
+    margin: 0 0 20px 0;
+    width: 100%; 
+}
+#steps-study-page .tabs .tabs-nav-es > li {
+    position: relative;
+    counter-increment: step;
+    font-family: leagueGothic, arial, helvetica;
+    font-size: 20px;
+    font-size: 1.25rem;
+    display: table-cell;
+    padding: 1em 2em;
+    background: #e7e7e8;
+    border-right: 2px solid #fff; 
+}
+#steps-study-page .tabs .tabs-nav-es > li:before {
+    content: counter(step) ".";
+    display: block;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    color: #bdbec0; 
+}
+#steps-study-page .tabs .tabs-nav-es > li:last-child {
+    border-right: none; 
+}
+#steps-study-page .tabs .tabs-nav-es > li > span {
+    color: #bdbec0;
+    text-decoration: none; 
+}
+#steps-study-page .tabs .tabs-nav-es > li.on {
+    background: #d1d2d4; 
+}
+#steps-study-page .tabs .tabs-nav-es > li.on:before {
+    color: #8dc63f; 
+}
+#steps-study-page .tabs .tabs-nav-es > li.on > span {
+    color: #8dc63f; 
+} */
+
+#steps-study-page.in-popup .redirect-iframe-popup {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    background: none;
+    color: #fff;
+    background: #6d6e71;
+    text-indent: 0; 
+}
+

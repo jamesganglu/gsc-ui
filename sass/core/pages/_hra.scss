@@ -194,7 +194,20 @@
 	.jspDrag{
 		background:url(../images/scroll-handler.png) no-repeat;
 		width:21px;
-		height:54px!important;
+		height:54px;
+	}
+
+	@include bp-medium{
+		.tabs-side-nav{
+			display: none;
+		}
+		.tab-contents{
+			width: auto;
+			float: none;
+		}
+		.tab-content-inner{
+			padding:20px 20px 60px 20px;
+		}
 	}
 }
 
@@ -205,33 +218,23 @@
 		color:$site-color-1;
 		margin:0 0 10px 0;
 	}
+
+	.field{
+		margin-bottom: 1em;
+	}
 	label{
 		display:inline-block;
 		vertical-align:top;
 		margin:0 20px 0 0;
 		color:#6d6e71;
 	}
-	.dropdownlist{
-		height:70px;
-		overflow-y:auto;
-		a{
-			padding:5px;
-			@include font-sizes(12px);
-		}
+	.btns{
+
 	}
 }
 
 .survey-popup{
-	@include clearfix();
-	@include border-radius(5px);
-	border:6px solid #dbdbdb;
-	background:#fff;
-	padding:20px;
-	max-width:600px;
-	min-height: 200px;
-	margin:20px auto;
-
-	position:relative;
+	@include build-message-popup(6px solid #dbdbdb, 20px, #fff, 5px, none);
 	h1{
 		@include font-sizes(22px);
 		color:#6d6e71;
@@ -372,4 +375,114 @@
 
 .standout-3{
 	color:#75ad5a;
+}
+
+.hra-tube-container{
+	@include clearfix;
+	.hra-tube-scale{
+		float:left;
+		margin-right:10px;
+		display:block;
+		background:url(../images/theme/hra-risk-scale.gif) no-repeat;
+		width:129px;
+		height:218px;
+	}
+	.hra-tubes{
+		float:right;			
+	}
+	.hra-tube-wrapper{
+		margin-right:5px;
+		cursor:pointer;
+		text-align: center;
+		float: left;
+		.hra-tube{
+			background:#e9e8e7;
+			width:64px;
+			height:218px;
+			position:relative;
+			margin:0 0 10px 0;
+			display:inline-block; 
+			.hra-tube-inner{
+				position:absolute;
+				bottom:0;
+				left:0;
+			}
+			
+			.hra-tube-body{
+				background-position:0 0;
+				background-repeat:repeat-y;
+				color:#fff;
+				font-size: 13px;
+				padding: 10px 5px;
+				display: block;
+				text-decoration: none;
+				
+			}
+
+			&.red-tube{
+				.hra-tube-body{
+					background:#ff0000;
+				}
+			}
+			&.yellow-tube{
+				.hra-tube-body{
+					background:#ffb500;
+				}
+			}
+			&.green-tube {
+				.hra-tube-body{
+					background:#78c848;
+				}
+			}
+		}
+		.hra-tube-date{
+			color:#fff;
+			background:#75ab58;
+			text-align:center;
+			padding:5px;
+			.alt &{
+				color:#fff;
+				background:#528b3a;
+			}
+		}
+	}
+	.hra-tube-risk-value{
+		padding:8px 0 0 0;
+		line-height:1;
+		display:block;
+		text-align:center;
+		background-position:0 0;
+		background-repeat:no-repeat;
+		margin:0 auto;
+	}
+
+	@include bp-small{
+		.hra-tube-scale, .hra-tubes{
+			float: none;
+			@include clearfix;
+		}
+		.hra-tube-scale{
+			margin: 0 auto 1em;
+		}
+		
+		.hra-tube-wrapper{
+			margin-bottom: 1em;
+		}
+
+		.hra-tube{
+			width: 35px;
+		}
+
+		.hra-tube-date{
+			@include font-size(12px);
+		}
+	}
+}
+
+#hra-thankyou{
+	ol{
+		li{
+			color: #666;
+		}
+	}
 }

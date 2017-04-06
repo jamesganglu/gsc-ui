@@ -1,0 +1,488 @@
+/************ KI 1st popup ******************/
+#ki-popup {
+    width:100%;
+}
+#ki-popup .head-bar {
+    width: 100%;
+    background: #8dc63f;
+    min-height: 72px;
+    position: relative; 
+}
+#ki-popup .head-bar h1 {
+    font-size: 42px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+    background: none;
+    text-align: center; 
+}
+#ki-popup .popup-body {
+    padding-top: 10px;
+}
+#ki-popup .ki-logo {
+    text-align: center;
+}
+#ki-popup .ki-text {
+    text-align: center;
+    line-height:46px;
+}
+#ki-popup .ki-text3 {
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 40px;
+}
+#ki-popup .ki-action {
+    text-align: right;
+    margin-top: 40px;
+}
+
+#ki-popup .btn-wide-style {
+    background: #8dc63f;
+    color: #fff !important;
+    font-size: 22px;
+    font-family: leagueGothic,arial;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    padding-left: 30px; 
+    padding-right: 30px;
+}
+
+/************** KI others popup ******************/
+
+* .kicanada-popup {
+    background: #fff; 
+}
+* .kicanada-popup .head-bar {
+    width: 100%;
+    background: #8dc63f;
+    min-height: 72px;
+    position: relative; 
+}
+* .kicanada-popup .head-bar h1 {
+    font-size: 42px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 15px 80px 15px 15px;
+    margin: 0;
+    background: none;
+    text-align: center; 
+}
+* .kicanada-popup .head-bar .btns {
+    min-height: 42px;
+    background: #6d6e71;
+    padding: 15px 10px;
+    color: #fff;
+    font-size: 17px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0; 
+}
+* .kicanada-popup .head-bar .btns a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    position: static; 
+}
+* .kicanada-popup .head-bar .btns .close-popup {
+    text-align: right;
+    font-size: 30px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px; 
+}
+* .kicanada-popup .popup-body {
+    padding: 20px 20px 20px 20px;
+    font-size: 16px;
+    color: #231f20;
+}
+* .kicanada-popup .popup-body.full {
+    padding: 0; 
+}
+* .kicanada-popup textarea {
+    resize:none; 
+}
+
+* .kicanada-popup .btns .btn, .btn-type-2 {
+    background: #6d6e71;
+    color: #fff !important;
+    font-size: 22px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px; 
+}
+
+* .kicanada-popup {
+    width: 100%;
+    margin: 0 auto; 
+}
+* .kicanada-popup .head-bar {
+    text-align: center; 
+}
+* .kicanada-popup .btns {
+    text-align: center; 
+}
+* .kicanada-popup .mfp-close {
+    display: none; 
+}
+
+/**************** KI Agreement **************************/
+#ki-agreement .ki-consent {
+    border: solid 1px #C7C9C9; 
+    width: 100%; 
+    height: 180px;
+    padding: 3px; 
+    overflow-y: scroll;
+    margin-bottom: 40px;
+}
+#ki-agreement .kicanada-page {
+    *zoom: 1;
+}
+#ki-agreement .kicanada-page:before, .kicanada-page:after {
+    display: table;
+    line-height: 0;
+    content: "";
+    clear: both;
+}
+#ki-agreement .kicanada-page .kicanada-page-left {
+    width: 5%;
+    float: left;
+}
+#ki-agreement .kicanada-page .kicanada-page-right {
+    width: 95%;
+    line-height: 20px;
+    float: right;
+}
+#ki-agreement .kicanada-page .kicanada-page-right span{
+    font-weight: 100;
+}
+#ki-agreement .line-4{
+    width:80%;
+    text-align: right;
+    margin-top: 30px;
+}
+
+/*************** KI Redeem Now **************************/
+#ki-redeem-now {
+    width: 450px;
+}
+#ki-redeem-now .redeem-body {
+    width: 90%;
+    text-align: center;
+    padding-left: 20px;
+    color: #231f20;
+}
+#ki-redeem-now .head-bar {
+    background: #fff;
+}
+#ki-redeem-now .line-1 {
+    text-align: center;
+    font-family: leagueGothic, arial, helvetica;
+    font-size: 32px;
+}
+#ki-redeem-now .line-2 {
+    text-align: center;
+    font-size: 16px;
+    line-height: 22px;
+    padding-top:8px;
+}
+#ki-redeem-now .line-3 {
+    text-align: left;
+    padding-left:40px;
+    padding-top:20px;
+}
+#ki-redeem-now .line-4 {
+    text-align: left;
+    padding-left:40px;
+    font-size: 16px;
+    line-height: 22px;
+}
+#ki-redeem-now .line-5 {
+    text-align: left;
+    padding-left:40px;
+    padding-bottom:80px;
+}
+#ki-redeem-now .line-5 .redeem-cancel {
+    float: left;
+}
+#ki-redeem-now .line-5 .redeem-confirm {
+    float: right;
+    padding-right:30px;
+}
+#ki-redeem-now .redeem-body a.btn-type-1 {
+    background: #8dc63f;
+    color: #fff !important;
+    font-size: 22px;
+    text-transform: none;
+    text-decoration: none;
+    border: none;
+    padding: 5px 12px 5px 12px; 
+}
+#ki-redeem-now .redeem-body a.btn-type-2 {
+    background: #6d6e71;
+    color: #fff !important;
+    font-size: 22px;
+    text-transform: none;
+    text-decoration: none;
+    border: none;
+    padding: 5px 12px 5px 12px; 
+}
+
+
+
+#ki-over-redeem {
+    width: 480px;
+}
+#ki-over-redeem .redeem-body {
+    width: 90%;
+    text-align: center;
+    padding-left: 20px;
+    color: #231f20;
+}
+#ki-over-redeem .head-bar {
+    background: #fff;
+}
+#ki-over-redeem .line-1 {
+    text-align: center;
+    font-family: leagueGothic, arial, helvetica;
+    font-size: 32px;
+}
+#ki-over-redeem .line-2 {
+    text-align: center;
+    font-family: leagueGothic, arial, helvetica;
+    font-size: 20px;
+    line-height: 24px;
+    padding-top:8px;
+}
+#ki-over-redeem .line-3 {
+    text-align: left;
+    padding-left:40px;
+    padding-top:20px;
+}
+#ki-over-redeem .line-4 {
+    text-align: left;
+    padding-left:40px;
+    font-size: 16px;
+    line-height: 22px;
+}
+#ki-over-redeem .line-5 {
+    text-align: left;
+    padding-left:40px;
+    padding-bottom:80px;
+}
+#ki-over-redeem .line-5 .redeem-cancel {
+    float: left;
+}
+#ki-over-redeem .line-5 .redeem-confirm {
+    float: right;
+    padding-right:30px;
+}
+#ki-over-redeem .redeem-body a.btn-type-1 {
+    background: #8dc63f;
+    color: #fff !important;
+    font-size: 20px;
+    text-transform: none;
+    text-decoration: none;
+    border: none;
+    padding: 5px 12px 5px 12px; 
+}
+#ki-over-redeem .redeem-body a.btn-type-2 {
+    background: #6d6e71;
+    color: #fff !important;
+    font-size: 20px;
+    text-transform: none;
+    text-decoration: none;
+    border: none;
+    padding: 5px 12px 5px 12px; 
+}
+
+/*************** KI Reward Store **************************/
+.ki-reward-store {
+    -moz-box-shadow: 0 0 10px 10px rgba(218, 218, 218, 0.5);
+    -webkit-box-shadow: 0 0 10px 10px rgba(218, 218, 218, 0.5);
+    box-shadow: 0 0 10px 10px rgba(218, 218, 218, 0.5);
+    border: 1px solid #dadada;
+    padding: 0 30px 30px 30px;
+    font-size: 16px; 
+}
+.ki-reward-store h1 {
+    color: #fff;
+    font-size: 26px;
+    font-family: leagueGothic, arial, helvetica;
+    background: #8dc63f;
+    padding: 15px 30px;
+    margin: 0 -30px 30px -30px; 
+}
+
+.ki-reward-store .ki-congratulation {
+    width: 100%;
+    background: #d1e8b2;
+    border: 1px solid grey;
+}
+.ki-reward-store .ki-congratulation .congrat-close {
+    width:100%;
+    text-align:right;
+    vertical-align:top;
+    padding-top:0px;
+    line-height:30px;
+}
+.ki-reward-store .ki-congratulation .congrat-close span {
+    text-align:right;
+    vertical-align:bottom;
+    padding-top:12px;
+    padding-right:8px;
+    font-size:13px;
+}
+.ki-reward-store .ki-congratulation .congrat-close a {
+    color:#fff;
+    background-color:#555555;
+    font-size: 18px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.ki-reward-store .ki-congratulation .ki-giftcard {
+    *zoom: 1;
+    margin-top:20px;
+}
+.ki-reward-store .ki-congratulation .ki-giftcard:before, .ki-giftcard:after {
+    display: table;
+    line-height: 0;
+    content: "";
+    clear: both;
+}
+.ki-reward-store .ki-congratulation .ki-giftcard .congrat-image {
+    float: left;
+    padding-left:25px;
+}
+.ki-reward-store .ki-congratulation .ki-giftcard .congrat-text {
+    width: 60%;
+    float: right;
+    line-height: 25px;
+    font-size: 18px;
+    padding-top:8px;
+    padding-right: 20px;
+}
+.ki-reward-store .congrat-reminder{
+    width:100%;
+    line-height: 25px;
+    text-align:left;
+    padding-top:15px;
+    padding-left:25px;
+}
+.ki-reward-store .ki-maincontent{
+    font-size: 16px;
+    color:#17191A;
+    font-weight:200;
+    margin-top: 20px;
+    line-height: 25px;
+}
+.ki-reward-store .ki-err {
+    font-size: 16px;
+    color:red;
+    margin-top: 15px;
+}
+.ki-reward-store .ki-redeem-points
+{
+    width: 100%;
+    background: #fff;
+    border: 1px solid grey;
+    margin-top:30px;
+}
+.ki-reward-store .ki-redeem-points .redeem-title {
+    background: #e6e7e9;
+    font-family: leagueGothic, arial, helvetica;
+    font-size: 22px;
+    color:#8dc63f;
+    text-align: left;
+    padding: 15px 15px 15px 15px;
+    *zoom: 1;
+}
+
+.ki-reward-store .ki-redeem-points .redeem-title:before, .ki-reward-store .ki-redeem-points .redeem-title:after {
+    display: table;
+    line-height: 0;
+    content: "";
+    clear: both;
+}
+.ki-reward-store .ki-redeem-points .redeem-title .title-left {
+    width: 60%;
+    float: left;
+}
+.ki-reward-store .ki-redeem-points .redeem-title .title-right {
+    width: 40%;
+    float:right;
+    line-height: 20px;
+    text-align:right;
+}
+
+
+.ki-reward-store .ki-redeem-points .redeem-giftcard{
+    text-align:center;
+    margin-top:30px;
+    margin-bottom:50px;
+}
+.ki-reward-store .ki-redeem-points .redeem-button{
+    text-align: right;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+.ki-reward-store .ki-redeem-points .rewards-button{
+    text-align: right;
+    margin: 20px 20px 20px 0;
+}
+.ki-reward-store .btn-redeem-now {
+    background: #8dc63f;
+    color: #fff !important;
+    font-size: 22px;
+    font-family: leagueGothic,arial;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    padding-left: 30px; 
+    padding-right: 30px;
+}
+
+.ki-reward-store .ki-success-redeem
+{
+    width: 100%;
+}
+.ki-reward-store .ki-success-redeem .redeem-success {
+    font-size: 22px;
+    font-weight: bold;
+}
+.ki-reward-store .ki-success-redeem .redeemsuccess-btn {
+    text-align: left;
+    padding:40px 0 40px 0;
+}
+.ki-reward-store .ki-success-redeem .redeemsuccess-btn .back2c4l {
+    float: left;
+    padding-left: 30px;
+}
+.ki-reward-store .ki-success-redeem .redeemsuccess-btn .printconf {
+    float: right;
+    padding-right:50px;
+}
+.ki-reward-store .ki-success-redeem a.btn-type-1 {
+    background: #8dc63f;
+    color: #fff !important;
+    font-size: 22px;
+    text-transform: none;
+    text-decoration: none;
+    border: none;
+    padding: 5px 20px 5px 20px; 
+}
+.ki-reward-store .ki-success-redeem a.btn-type-2 {
+    background: #6d6e71;
+    color: #fff !important;
+    font-size: 22px;
+    text-transform: none;
+    text-decoration: none;
+    border: none;
+    padding: 5px 20px 5px 20px; 
+}

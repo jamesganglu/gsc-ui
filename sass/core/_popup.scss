@@ -6,15 +6,18 @@
 
 // used in hra history popup etc.
 .plain-popup-wrapper{
-	padding: 20px;
-	position: relative;
-	>.inner{
-		position: relative;
-		@include clearfix;
-		background:#fff;
-		padding: 20px;
+	@include build-popup();
+	.head-bar{
+		min-height: 72px;
+	}
+
+	&.inline-popup{
+		.mfp-close{
+			display: none;
+		}
 	}
 }
+
 //used in message popup message-popup.aspx
 //no background, size, border apply in it.
 .popup-wrapper{
@@ -26,6 +29,9 @@
 
 
 .message-popup{
+	.close-iframe-popup{
+		@include btn-close-popup-1();
+	}
 	position:relative;
 	font-family:$font-stack-1; 
 	@include font-size(16px); 
@@ -56,18 +62,17 @@
 		right:-16px;/* */
 		text-decoration:none;
 	}
-	h1{
+	/* h1{
 		background:$site-color-1;
 		color:#fff;
-		//padding:5px 10px;
 	}
 	h2{
 		color:$site-color-1;
 		font-weight:bold;
-	}
+	} 
 	h3{
 		font-weight:bold;
-	}
+	}*/
 	ol{
 		list-style:decimal;
 		margin:0 0 1em 0;
@@ -113,14 +118,8 @@
 }
 
 .help-popup{
-	max-width:300px;
-	padding:10px;
-	font-family:Arial, 'Helvetica Neue'; 
-	font-size:16px; 
-	background-color:#fff;
-	position:relative;
-	margin:20px auto;
-	@include clearfix();
+	@include build-message-popup(6px solid #dbdbdb, 20px, #fff, 5px, 600px);
+	@include font-sizes(16px);
 }
 
 .inline-diag-popup{
@@ -154,19 +153,29 @@
 	}
 }
 
-
-
 .message-box{
-    width:600px;
+    max-width:600px;
     background:#fff;
-    padding:20px;
+    padding:40px 20px 20px 20px;
+	margin:0 auto;
+	position:relative;
+	.close-msg-btn{
+		background:url(../images/theme/close-popup.png);
+		width:27px;
+		height:27px;
+		display:block;
+		position:absolute;
+		top:-14px;
+		right:-14px;
+		cursor:pointer;
+	}
 }
 
-	#reward-bid-popup{
-		p{
-			margin-bottom:5px;
-		}
+#reward-bid-popup{
+	p{
+		margin-bottom:5px;
 	}
+}
 
 #vip-challenge-notify{
 	width:900px;

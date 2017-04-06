@@ -166,7 +166,11 @@
 					text-align:center;
 					font-size:25px;
 					background:$site-color-1;
-					
+					&.off{
+						img{
+							visibility: hidden;
+						}
+					}
 				}
 				.text{
 					font-family:$font-stack-2;

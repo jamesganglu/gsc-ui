@@ -458,6 +458,16 @@
                 }
             }
         }
+        @include bp-small{
+            .box{
+                width:auto;
+                float:none;
+                margin:0 0 20px 0;
+                &:nth-child(2n){
+                    float:none;
+                }
+            }
+        }
     }
 
 /*     
@@ -538,10 +548,16 @@
 
 .active-pile{
     width: 48%;
-    max-width: 320px;
     float: left;
     &:nth-child(2n){
       float: right;  
+    }
+    @include bp-small{
+        width: auto;
+        float: none;
+        &:nth-child(2n){
+          float: none;  
+        }
     }
     margin: 25px 0 120px 0;
     .part-1{
