@@ -379,7 +379,7 @@
 }
 
 
-@mixin grid-list($col:3, $gutter:3){
+@mixin grid-list($col:3, $gutter:3, $isOneCol:false){
   @include clearfix();
   li{
     float: left;
@@ -390,18 +390,19 @@
       margin-right:0; 
     }
   }
-
-  /* @include bp-medium{
-    li{
-      width:auto;
-      float:none;
-      max-width: 320px;
-      margin: 0 auto 1em;
-     &:nth-child(#{$col}n){
-        margin-right:auto; 
+  @if $isOneCol{
+      @include bp-medium{
+        li{
+          width:auto;
+          float:none;
+          max-width: 320px;
+          margin: 0 auto 1em;
+         &:nth-child(#{$col}n){
+            margin-right:auto; 
+          }
+        }
       }
-    }
-  } */
+  }
 }
 
 @mixin table-list(){
@@ -463,12 +464,27 @@
   color: $color;
   .cell{
     display: table-cell;
-    padding:$padding $padding/2; 
+    padding:$padding $padding/3; 
     &:first-child{
       padding-left: $padding;
     }
     &:last-child{
       padding-right: $padding;
+    }
+  }
+
+  @include bp-small{
+    display: block;
+    .cell{
+      display: block;
+      padding: .5em;
+
+      &:first-child{
+        padding-left: .5em;
+      }
+      &:last-child{
+        padding-right: .5em;
+      }
     }
   }
 }

@@ -1,9 +1,12 @@
 .greeting-popup{
 	@include build-popup(970px, 30px);
 	.popup-body{
+		@include clearfix;
 		padding: 40px 100px;
+		@include bp-small{
+			padding: 40px;
+		}
 	}
-
 	h1{
 		font-family: $font-stack-1-regular;
 		text-transform: inherit;
@@ -20,12 +23,11 @@
 
 #steps-study-page{
 	background-image:url(../images/bg1.jpg);
+	padding:110px 0 0 40px;
 	background-position: 0 0;
 	background-repeat: no-repeat;
 	//background-size:contain;
 	background-color: #FFF;
-	padding:110px 0 0 40px;
-	position:relative;
 	&.size-2{
 		padding:110px 0 0 150px;
 	}
@@ -36,6 +38,14 @@
 
 		}
 	}
+
+	@include bp-medium{
+		background-image:url(../images/bg1s.jpg);
+		padding:60px 0 0 20px;
+
+	}
+	position:relative;
+
 
 	&.in-popup{
 		padding-top:120px;
@@ -82,7 +92,11 @@
 		color: #000;
 		text-transform: inherit;
 		&.size-2{
-			@include font-size(36px);
+			@include font-sizes(36px,34px,30px);
+		}
+		@include bp-medium{
+			top: 0;
+			left: 80px;
 		}
 	}
 
@@ -96,9 +110,12 @@
 	.intro{
 		min-height: 80px;
 		padding-left: 120px;
-		@include font-size(18px);
+		@include font-sizes(18px);
 		line-height: 2;
 		@include clearfix;
+		@include bp-medium{
+			padding-left: 40px;
+		}
 	}
 
 	.btn{
@@ -405,8 +422,19 @@
 	}
 
 	.icon-text-bar{
+		@include font-sizes(24px,20px,18px);
 		.icon,.text{
 			padding:0 .5em 1em 0;
+		}
+		@include bp-medium{
+			.icon{
+				width: 70px;
+			}
+		}
+		@include bp-small{
+			.icon{
+				width: 50px;
+			}
 		}
 	}
 
@@ -414,6 +442,29 @@
 
 	}
 
+	.tbl-top-blocks{
+		display:table;
+		width: 100%;
+		margin-bottom: 10px;
+		table-layout:fixed;
+		.cell{
+			display: table-cell;
+			width: 33%;
+			vertical-align: bottom;
+			text-align:center;
+			&:first-child{
+				text-align: left;
+			}
+			&:last-child{
+				text-align: right;
+			}
+			&:nth-child(2){
+				background: #e7e7e8;
+				padding:1em .5em;
+				@include font-sizes(20px,18px,16px);
+			}
+		}
+	}
 	#steps-history{
 		@include font-size(20px);
 		margin-bottom: 2em;
@@ -435,14 +486,8 @@
 	.device-id-input{
 		@include input-bar();
 		margin-bottom: 5em;
-		.cell{
-			padding:0 1em;
-		}
 		font-family: $font-stack-2;
-		@include font-size(24px);
-		input[type="text"]{
-			border:none;
-		}
+		@include font-sizes(24px,22px,20px);
 	}
 
 	.icon-text-bar{

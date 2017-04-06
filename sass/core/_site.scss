@@ -77,13 +77,13 @@
 
 		&.style-4{
 			background:none;
-			font-size:48px;
+			@include font-sizes(48px,45px,40px);
 			height:auto;
 			line-height:1;
 			font-family:$font-stack-2;
 			text-transform:uppercase;
 			padding:0;
-			margin:0 0 20px 0;
+			margin:0 0 .5em 0;
 			.line-1{
 				color:#6d6e71;
 				display:block;
@@ -96,13 +96,13 @@
 
 		&.style-5{
 			background:none;
-			font-size:48px;
+			@include font-sizes(48px,45px,40px);
 			height:auto;
 			line-height:1;
 			font-family:$font-stack-2;
 			text-transform:uppercase;
 			padding:0;
-			margin:0 0 20px 0;
+			margin:0 0 .5em 0;
 			color:$site-color-1;
 		}
 	}
@@ -112,17 +112,17 @@
 		//GREEN, USED IN HOME PAGE
 		&.style-2{
 			color:$site-color-1;
-			font-size:36px;
+			@include font-sizes(36px,32px,30px);
 			text-transform:uppercase;
-			margin:0 0 18px 0;
+			margin:0 0 .5em 0;
 		}
 
 		//GREY, USED IN HOME PAGE
 		&.style-3{
 			color:$site-grey-3;
-			font-size:30px;
+			@include font-sizes(30px,28px,26px);
 			text-transform:uppercase;
-			margin:0 0 20px 0;
+			margin:0 0 .6em 0;
 		}
 
 		//GREEN, USED IN MY CHANGE 4 LIFE
@@ -520,7 +520,7 @@
 		background:#afb1b3;
 		padding:5px;
 		color: #464748;
-		@include font-size(20px);
+		@include font-sizes(20px,18px,16px);
 		font-family: $font-stack-2;
 		text-align: center;
 	}
